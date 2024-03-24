@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Amit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div class="box">
+            <h1>Do you love me ?❤️</h1>
+            <button id="target">No</button>
+            <button id="yes">Yes</button>
+        </div>
+    </div>
+    <script>
+        const target = document.getElementById('target');
+        function moveTarget () {
+            const maxWidth =400;
+            const maxHeigth = 400;
+
+            const randomX = Math.floor(Math.random() * maxWidth);
+            const randomY = Math.floor(Math.random() * maxHeigth);
+
+            target.style.left = randomX + 'px';
+            target.style.top = randomY + 'px';
+        }
+        target.addEventListener('mouseenter', function() {
+            moveTarget();
+        });
+    </script>
+</body>
+</html>
